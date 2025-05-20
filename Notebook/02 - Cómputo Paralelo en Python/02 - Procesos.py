@@ -27,8 +27,7 @@ if __name__ == "__main__":
     
     # Crear e Inicializar los Procesos
     for i in range(len(limites_inferiores)):
-        p = multiprocessing.Process(target=operaciones_rango, kwargs={"limite_inferior": limites_inferiores[i],
-                                                                      "limite_superior": limites_superiores[i]})
+        p = multiprocessing.Process(target=operaciones_rango, kwargs={"limite_inferior": limites_inferiores[i],"limite_superior": limites_superiores[i]})
         p.start()
     
 
